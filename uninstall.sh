@@ -13,6 +13,8 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
   LOOKFEEL_DIR="/usr/share/plasma/look-and-feel"
   KVANTUM_DIR="/usr/share/Kvantum"
   WALLPAPER_DIR="/usr/share/wallpapers"
+  KONSOLE_DIR="/usr/share/konsole"
+
 else
   AURORAE_DIR="$HOME/.local/share/aurorae/themes"
   SCHEMES_DIR="$HOME/.local/share/color-schemes"
@@ -21,6 +23,7 @@ else
   LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
   KVANTUM_DIR="$HOME/.config/Kvantum"
   WALLPAPER_DIR="$HOME/.local/share/wallpapers"
+  KONSOLE_DIR="$HOME/.local/share/konsole"
 fi
 
 
@@ -40,6 +43,7 @@ uninstall() {
   check_and_remove "${LOOKFEEL_DIR}/com.github.Yisus7u7.${name}*"
   check_and_remove "${KVANTUM_DIR}/${name}*"
   check_and_remove "${WALLPAPER_DIR}/${name}*"
+  check_and_remove "${KONSOLE_DIR}/${name}*"
 }
 
 echo "Uninstalling '${THEME_NAME} kde themes'..."

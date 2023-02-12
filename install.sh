@@ -12,6 +12,7 @@ if [ "$UID" -eq "$ROOT_UID" ]; then
   LOOKFEEL_DIR="/usr/share/plasma/look-and-feel"
   #KVANTUM_DIR="/usr/share/Kvantum"
   WALLPAPER_DIR="/usr/share/wallpapers"
+  KONSOLE_DIR="/usr/share/konsole"
 else
   AURORAE_DIR="$HOME/.local/share/aurorae/themes"
   SCHEMES_DIR="$HOME/.local/share/color-schemes"
@@ -20,6 +21,7 @@ else
   LOOKFEEL_DIR="$HOME/.local/share/plasma/look-and-feel"
   #KVANTUM_DIR="$HOME/.config/Kvantum"
   WALLPAPER_DIR="$HOME/.local/share/wallpapers"
+  KONSOLE_DIR="$HOME/.local/share/konsole"
 fi
 
 THEME_NAME=Edge
@@ -30,6 +32,7 @@ THEME_NAME=Edge
 [[ ! -d ${LOOKFEEL_DIR} ]] && mkdir -p ${LOOKFEEL_DIR}
 #[[ ! -d ${KVANTUM_DIR} ]] && mkdir -p ${KVANTUM_DIR}
 [[ ! -d ${WALLPAPER_DIR} ]] && mkdir -p ${WALLPAPER_DIR}
+[[ ! -d ${KONSOLE_DIR} ]] && mkdir -p ${KONSOLE_DIR}
 
 install() {
   local name=${1}
@@ -40,9 +43,11 @@ install() {
   [[ -d ${LOOKFEEL_DIR}/com.github.Yisus7u7.${name} ]] && rm -rf ${LOOKFEEL_DIR}/com.github.Yisus7u7.${name}*
   [[ -d ${KVANTUM_DIR}/${name} ]] && rm -rf ${KVANTUM_DIR}/${name}*
   [[ -d ${WALLPAPER_DIR}/${name} ]] && rm -rf ${WALLPAPER_DIR}/${name}
+  [[ -d ${KONSOLE_DIR}/${name}Dark ]] && rm -rf ${KONSOLE_DIR}/${name}*
 
   cp -r ${SRC_DIR}/aurorae/*                                                         ${AURORAE_DIR}
   cp -r ${SRC_DIR}/color-schemes/*.colors                                            ${SCHEMES_DIR}
+  cp -r ${SRC_DIR}/konsole/*.colorscheme                                             ${KONSOLE_DIR}
   #cp -r ${SRC_DIR}/Kvantum/*                                                         ${KVANTUM_DIR}
   cp -r ${SRC_DIR}/plasma/desktoptheme/*                                             ${PLASMA_DIR}
   cp -r ${SRC_DIR}/plasma/layout-templates/*                                         ${LAYOUT_DIR}

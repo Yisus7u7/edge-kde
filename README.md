@@ -1,11 +1,12 @@
 
-Edge kde is a materia Design theme for KDE Plasma desktop based on ChromeOS KDE.
+Edge kde is a materia Design theme for KDE Plasma desktop based on ChromeOS KDE, using Microsoft Edge and Material Desing Colors.
 
 In this repository you'll find:
 
 - Aurorae Themes
 - Plasma Color Schemes
 - Plasma Desktop Themes
+- Konsole Colorscheme
 - Plasma Look-and-Feel Themes (break, work in progress)
 
 ## Installation
@@ -38,6 +39,10 @@ Or else use
   Run `Plasma Settings > Appearance` to choose and apply **Lightly** Application style.
 
 - Install [Papirus icon theme](https://github.com/PapirusDevelopmentTeam/papirus-icon-theme) for a more consistent and beautiful experience.
+
+- Install [Oreo Cursors](https://github.com/varlesh/oreo-cursors) for a more consistent and beautiful experience.
+
+- Use default breeze default splash and sddm theme.
 
 ## License
 
