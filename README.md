@@ -45,4 +45,4 @@ GNU GPL v3
 
 ## preview
 
-![1](../master/plasma/look-and-feel/com.github.Yisus7u7.Edge-light/contents/previews/fullscreenpreview.jpg)
+![1](../main/plasma/look-and-feel/com.github.Yisus7u7.Edge-light/contents/previews/fullscreenpreview.jpg)
